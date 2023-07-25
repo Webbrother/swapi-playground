@@ -36,7 +36,7 @@ export const Heroes = () => {
         enterButton='Search'
         size='large'
         defaultValue={searchParam || ''}
-        onSearch={search => setSearchParams(prev => ({ ...searchParamsToObject(prev), search }))}
+        onSearch={search => setSearchParams({ page: '1', search })}
       />
       <HeroesList heroes={results} isLoading={isFetching} />
       <Pagination
